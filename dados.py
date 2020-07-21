@@ -1,16 +1,16 @@
 import csv
 
-#le arquivo csv com os dados de acesso coletados
+#lê arquivo csv com os dados de acesso coletados
 def carregar_acessos():
 
     X = []
     Y = []
 
-    arquivo = open("./acesso.csv", 'rb')
+    arquivo = open("./acesso.csv", 'r')
     leitor = csv.reader(arquivo)
 
     #joga fora primeira linha descritiva
-    leitor.next()
+    next(leitor)
 
     for home, como_funciona, contato, comprou in leitor:
         dado = [int(home), int(como_funciona), int(contato)]
