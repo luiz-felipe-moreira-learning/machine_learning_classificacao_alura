@@ -6,7 +6,7 @@ def carregar_acessos():
     X = []
     Y = []
 
-    arquivo = open("../acesso.csv", 'rb')
+    arquivo = open("./acesso.csv", 'rb')
     leitor = csv.reader(arquivo)
 
     #joga fora primeira linha descritiva
